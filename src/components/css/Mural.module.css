@@ -1,0 +1,85 @@
+section {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mural {
+  width: 46rem;
+  max-height: 28.18rem;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.actions {
+  box-sizing: border-box;
+  display: flex;
+} 
+
+#createdTasks, #doneTasks {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#createdTasks {
+  color: var(--blue);
+}
+
+#doneTasks {
+  color: var(--purple);
+}
+
+#doneTasks + span, #createdTasks + span {
+  background: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+  color: var(--gray-200);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  vertical-align: center;
+}
+
+.mural header::after {
+  content: '';
+  background-color: var(--gray-300);
+  opacity: 0.4;
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.tasksList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noTasks {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1.2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center; 
+}
+
+#listIcon {
+  margin-bottom: 1rem;
+}
+
+.noTasks p {
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.noTasks p:first-of-type {
+  font-weight: bold;
+}
