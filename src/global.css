@@ -28,3 +28,9 @@ body {
 body, button, span, p, ::placeholder {
   font-family: 'Inter', sans-serif;
 }
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}

@@ -2,6 +2,8 @@ import muralStyles from "./css/Mural.module.css";
 
 import listIcon from "../assets/clipboard.svg";
 
+import { Task } from './Task.tsx';
+
 export function Mural() {
   return (
     <section>
@@ -22,6 +24,7 @@ export function Mural() {
             <p>Você ainda não tem tarefas cadastradas</p>
             <p>Crie tarefas e organize seus itens a fazer</p>
           </div>
+          <Task/>
         </ul>
       </div>
     </section>

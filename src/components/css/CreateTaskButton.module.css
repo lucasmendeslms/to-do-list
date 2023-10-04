@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  /* border: 1px solid red; */
   margin-top: -1.652rem;
 }
 
@@ -11,6 +10,7 @@
   padding: 1rem;
   border-style: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 #inputTask {
@@ -18,11 +18,25 @@
   width: 39.875rem;
   height: 3.375rem;
   border: 1px solid var(--gray-700);
+  color: white;
+  font: 1rem 'Inter', sans-serif;
+  transition: border, background 0.3s;
 }
 
 #inputTask::placeholder {
   font-size: 1rem;
   color: var(--gray-300);
+  flex-wrap: wrap;
+}
+
+#inputTask:focus{
+  cursor: text;
+  font-size: 1rem;
+  border-color: var(--blue);
+}
+
+#inputTask:hover {
+  background: var(--gray-400);
 }
 
 #createButton {
@@ -35,9 +49,25 @@
   font-weight: bold;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s;
 }
 
 #createButton img {
   display: block;
   margin: 0;
+}
+
+#createButton:hover {
+  background: var(--blue);
+}
+
+#createButton:active {
+  box-shadow: 2px 2px 5px var(--blue-dark);
+}
+
+@media(max-width: 23.5rem) {
+  .contentBox {
+    flex-wrap: wrap;
+  }
+  
 }
