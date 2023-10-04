@@ -3,10 +3,6 @@ import taskStyles from './css/Task.module.css';
 import trashIcon from '../assets/trash.svg';
 
 export function Task() {
-
-  const checkboxMargin = document.querySelector('.checkboxMargin');
-  console.log(checkboxMargin + 'oi')
-
   return (
     <li className={taskStyles.container}>
       <div className={taskStyles.contentTask}>
