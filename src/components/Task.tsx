@@ -1,14 +1,26 @@
 import taskStyles from './css/Task.module.css';
 
 import trashIcon from '../assets/trash.svg';
+import { useState } from 'react';
 
 export function Task() {
+
+  const [completed, setCompleted] = useState(false);
+
+  function handleCompletedTasks() {
+    setCompleted((state) => {
+      return !state;
+    });
+  }
+
+  const taskStatus = completed ? 'completedTask' : ''; 
+
   return (
     <li className={taskStyles.container}>
-      <div className={taskStyles.contentTask}>
-        <div className={taskStyles.checkboxContainer}>
+      <div className={`${taskStyles.contentTask} ${taskStyles[taskStatus]}`}>
+        <div className={taskStyles.checkboxContainer}> 
           <span className={taskStyles.checkboxMargin}>
-            <input type="checkbox" name="task1" value="task" id='task1' className={taskStyles.checkbox}/>
+            <input type="checkbox" name="task1" value="task" id='task1' className={taskStyles.checkbox} onChange={handleCompletedTasks}/>
           </span>
         </div>
         <label htmlFor="task1">

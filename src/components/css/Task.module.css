@@ -6,30 +6,28 @@
   margin-bottom: 0.75rem;
   border-radius: 8px;
   list-style: none;
-  justify-content: center;
   align-items: center;
 }
 
 .contentTask {
-  display: flex;
-  /* border: 1px solid green; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.875rem 1fr 1.875rem;
   margin: 1rem;
-  gap: 10px;
+  align-items: center;
 }
 
 .checkboxContainer {
   display: flex;
   align-items: center;
-  /* border: 1px solid greenyellow; */
 }
 
 .checkboxMargin {
   display: block;
-  border: 0.125rem solid var(--purple-dark);
+  border: 0.125rem solid var(--blue);
   width: 1.09rem;
   height: 1.09rem;
   border-radius: 50%;
-  /* background: var(--purple-dark); */
 }
 
 .checkbox {
@@ -74,7 +72,7 @@
   font-size: 0.875rem;
   max-width: 39.5rem;
   max-height: 2.5rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: transparent var(--gray-300);
   scrollbar-gutter: stable both-edges;
   padding: 0 0.625rem;
@@ -91,6 +89,17 @@
 }
 
 #trashIcon {
-  margin: 0;
+  margin: 0 0 0 0.625rem;
   cursor: pointer;
+}
+
+
+.completedTask .checkboxMargin {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+}
+
+.completedTask label {
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
