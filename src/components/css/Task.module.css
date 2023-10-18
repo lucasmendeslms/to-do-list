@@ -89,8 +89,13 @@
 }
 
 #trashIcon {
-  margin: 0 0 0 0.625rem;
+  margin: 0;
   cursor: pointer;
+}
+
+#deleteTask {
+  background: transparent;
+  border: none;
 }
 
 

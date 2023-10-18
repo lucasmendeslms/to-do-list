@@ -30,7 +30,9 @@ export function Task() {
           4. Escrever um resumo das conclusões e recomendações.
           5. Revisar e finalizar o relatório antes do prazo.
         </label>
-        <img src={trashIcon} alt="Excluir tarefa" id={taskStyles.trashIcon}/>
+        <button name='deleteTask' id={taskStyles.deleteTask}>
+          <img src={trashIcon} alt="Excluir tarefa" id={taskStyles.trashIcon}/>
+        </button>
       </div>
     </li>
   )

@@ -55,14 +55,19 @@
 #createButton img {
   display: block;
   margin: 0;
+  pointer-events: none;
 }
 
 #createButton:hover {
   background: var(--blue);
 }
 
-#createButton:active {
+#createButton:not(:disabled):active {
   box-shadow: 2px 2px 5px var(--blue-dark);
+}
+
+#createButton:disabled {
+  cursor: not-allowed;
 }
 
 @media(max-width: 23.5rem) {
